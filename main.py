@@ -16,7 +16,7 @@ if 'index' not in st.session_state:
 if openai_api_key:
     st.write("API keys have been set.")
 
-    uploaded_file = st.file_uploader("Upload pdf")
+    uploaded_file = st.file_uploader("Upload pdf", type="pdf")
 
     if uploaded_file and st.button("Make index data"):
         with st.spinner("Loading data..."):
